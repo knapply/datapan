@@ -1,22 +1,26 @@
 import os
+import pytest
 import sift
 
-# files = os.listdir("test-data")
-test_data_dir = "test-data"
 
-# target_extensions = [".json", ".ndjson"]
+def get_test_files(target_dir="test-data", target_exts=[".json", ".ndjson"]):
+    out = []
+    for file in os.listdir(target_dir):
+        for ext in target_exts:
+            if file.endswith(ext):
+                out.append(os.path.join(target_dir, file))
+                break
+    return out
 
-# target_files = []
-# for file in os.listdir(test_data_dir):
-#     for ext in target_extensions:
-#         if file.endswith(ext):
-#             target_files.append(os.path.join(test_data_dir, file))
-#             break
 
-# print(target_files)
-
-test = sift.hello_rust(test_data_dir)
-
-for t in test:
-    print(t, end="\n\n")
-
+def test_sift(target_dir="test-data"):
+    test = sift.hello_rust(target_dir)
+    
+    test_files = get_test_files(target_dir)
+    target = []
+    for file in test_files:
+        with open(file) as f:
+            for l in f:
+                target.append(l)
+    
+    assert len(test) == len(target)
