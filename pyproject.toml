@@ -1,6 +1,20 @@
-[build-system]
-requires = ["maturin"]
-build-backend = "maturin"
+[tool.poetry]
+name = "sift"
+version = "0.1.0"
+authors = ["Brendan Knapp <brendan.knapp@nps.edu>"]
+edition = "2018"
+documentation = "https://github.com/knapply/sift"
+homepage = "https://github.com/knapply/sift"
+repository = "https://github.com/knapply/sift"
+readme = "README.md"
+keywords = ["json", "filter"]
+description = """
+sift filters (big) files.
+"""
 
-[tool.maturin]
-bindings = "bin"
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.5"
+maturin = "==0.7.7"
