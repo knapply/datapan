@@ -2,7 +2,7 @@
 # _`sift`_
 
 <!-- badges: start -->
-<!-- [![Build][https://github.com/huggingface/tokenizers/workflows/Rust/badge.svg](https://github.com/knapply/sift/actions)] -->
+[![Build][https://github.com/huggingface/tokenizers/workflows/Rust/badge.svg](https://github.com/knapply/sift/actions)]
 <!-- [![crates.io](https://img.shields.io/crates/v/sift.svg)](https://crates.io/crates/sift) -->
 [![Lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)]()
 [![Travis-CI Build Status](https://travis-ci.org/knapply/sift.svg?branch=master)](https://travis-ci.org/knapply/sift)
