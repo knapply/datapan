@@ -3,8 +3,7 @@
 
 <!-- badges: start -->
 
-[![CRAN
-status](https://www.r-pkg.org/badges/version/birdcage)](https://cran.r-project.org/package=birdcage)
+[![Crates status](http://meritbadge.herokuapp.com/sift)](https://crates.io/crates/sift)
 [![Lifecycle](https://img.shields.io/badge/lifecycle-maturing-orange.svg)](https://www.tidyverse.org/sift/#experimental)
 [![Travis-CI Build
 Status](https://travis-ci.org/knapply/sift.svg?branch=master)](https://travis-ci.org/knapply/sift)
