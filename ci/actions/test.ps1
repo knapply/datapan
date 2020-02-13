@@ -10,10 +10,4 @@ function Invoke-Call
     }
 }
 
-Invoke-Call { cargo test --verbose --features="num-bigint num-complex" }
-
-foreach ($example in Get-ChildItem -dir "examples")
-{
-    Set-Location $example
-    Invoke-Call { tox -c "tox.ini" -e py }
-}
+Invoke-Call { tox -c "tox.ini" -e py }

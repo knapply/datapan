@@ -30,7 +30,7 @@ source sift_env/bin/activate
 * install _`sift`_
 
 ```sh
-pip3 install git+git://github.com/knapply/sift
+pip3 install git+git://github.com/knapply/sift.git
 ```
 
 <!-- # Usage -->
