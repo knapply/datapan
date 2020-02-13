@@ -14,9 +14,8 @@
 
 # Installation
 
-```
-[dependencies]
-sift = { git = "https://github.com/knapply/sift"}
+```shell
+pip3 install git+git://github.com/knapply/sift
 ```
 
-# Usage
+<!-- # Usage -->
