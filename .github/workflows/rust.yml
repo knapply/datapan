@@ -24,13 +24,11 @@ jobs:
           with:
             toolchain: nightly
             default: true
-        - name: Build
+        - name: Build sift
           run: cargo build --verbose
-        - name: Install test dependencies
+        - name: Python Dependencies
           run: |
             python -m pip install -U pip setuptools
             pip install setuptools-rust pytest pytest-benchmark tox tox-venv
-        - name: Test
-          run: ci/actions/test
       env:
         RUST_BACKTRACE: 1
