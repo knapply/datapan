@@ -30,5 +30,7 @@ jobs:
           run: |
             python -m pip install -U pip setuptools
             pip install setuptools-rust pytest pytest-benchmark tox tox-venv
+        - name: pytest
+          run: pytest
       env:
         RUST_BACKTRACE: 1

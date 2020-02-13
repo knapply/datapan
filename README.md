@@ -1,5 +1,5 @@
 
-# `sift`
+# _`sift`_
 
 <!-- badges: start -->
 <!-- [![Build][https://github.com/huggingface/tokenizers/workflows/Rust/badge.svg](https://github.com/knapply/sift/actions)] -->
@@ -13,6 +13,16 @@
 
 
 # Installation
+
+* Create and activate a virtual env if desired.
+
+```sh
+# sudo apt-get install python3-venv
+python3 -m venv sift_env
+source sift_env/bin/activate
+```
+
+* Install _`sift`_.
 
 ```sh
 pip3 install git+git://github.com/knapply/sift
