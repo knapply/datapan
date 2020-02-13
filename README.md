@@ -5,7 +5,6 @@
 <!-- [![crates.io](https://img.shields.io/crates/v/sift.svg)](https://crates.io/crates/sift) -->
 [![Build](https://github.com/knapply/sift/workflows/Rust+Python/badge.svg)](https://github.com/knapply/sift/actions)
 [![Lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)]()
-[![Code Size](https://img.shields.io/github/languages/code-size/knapply/sift.svg)](https://github.com/knapply/sift)
 <!-- [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) -->
 <!-- badges: end -->
 
