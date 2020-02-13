@@ -14,7 +14,7 @@
 
 # Installation
 
-```shell
+```sh
 pip3 install git+git://github.com/knapply/sift
 ```
 
