@@ -21,3 +21,4 @@ examples/*/py*
 extensions/stamps/
 pip-wheel-metadata
 valgrind-python.supp
+sift_env
