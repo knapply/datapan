@@ -32,7 +32,6 @@ jobs:
             pip install setuptools-rust pytest pytest-benchmark tox tox-venv
         - name: Install and Test sift (Python)
           run: |
-            pip uninstall sift --y
-            tox -c "tox.ini" -e py
+            python setup.py test
       env:
         RUST_BACKTRACE: 1
