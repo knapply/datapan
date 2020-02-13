@@ -10,24 +10,35 @@ jobs:
         matrix:
             os: [ubuntu-16.04, ubuntu-latest, windows-latest] # macOS-latest
             python-version: [3.6, 3.7, 3.8]
-  
+
       steps:
-        - uses: actions/checkout@v1
+        - name: Checkout
+          uses: actions/checkout@v1
+  
         - name: Set up Python ${{ matrix.python-version }}
           uses: actions/setup-python@v1
           with:
             python-version: ${{ matrix.python-version }}
-        - name: Set Python PATH
-          run: ci/actions/setup
-        - name: Install Rust
+  
+        - name: Install dependencies
+          run: |
+            python -m pip install --upgrade pip
+            pip install poetry
+            poetry install
+        - name: Install latest nightly
           uses: actions-rs/toolchain@v1
           with:
             toolchain: nightly
-            default: true
+            override: true
+  
         - name: Build Python package
           run: poetry run maturin develop --release
+  
         - name: pytest
           run: poetry run pytest tests
+  
+        - name: Benchmark
+          run: poetry run pytest benchmarks --compare
           
         # - name: Build sift
         #   run: cargo build --verbose
