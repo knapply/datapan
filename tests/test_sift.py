@@ -24,3 +24,4 @@ def test_sift(target_dir="test-data"):
                 target.append(l)
     
     assert len(test) == len(target)
+    print(test)
