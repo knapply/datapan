@@ -15,11 +15,6 @@ v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/li
 bytes](https://img.shields.io/github/languages/code-size/knapply/sift.svg)](https://github.com/knapply/sift)
 <!-- badges: end -->
 
-# Demo
-
-[`{birdcage}` on shinyapps.io](https://bknapp.shinyapps.io/birdcage/)
-
-<img src="man/figures/demo.gif" style="display: block; margin: auto;" />
 
 # Installation
 
