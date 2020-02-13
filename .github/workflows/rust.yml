@@ -1,4 +1,4 @@
-name: Rust
+name: Rust + Python
 
 on: [push, pull_request]
 
@@ -30,7 +30,7 @@ jobs:
           run: |
             python -m pip install -U pip setuptools
             pip install setuptools-rust pytest pytest-benchmark tox tox-venv
-        - name: pytest
-          run: pytest
+        - name: Install and Test sift (Python)
+          run: python setup.py test
       env:
         RUST_BACKTRACE: 1
