@@ -1,4 +1,4 @@
-name: Rust + Python
+name: Rust+Python
 
 on: [push, pull_request]
 
