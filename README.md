@@ -2,8 +2,8 @@
 # _`sift`_
 
 <!-- badges: start -->
-[![Build](https://github.com/knapply/sift/workflows/Rust+Python/badge.svg)](https://github.com/knapply/sift/actions)
 <!-- [![crates.io](https://img.shields.io/crates/v/sift.svg)](https://crates.io/crates/sift) -->
+[![Build](https://github.com/knapply/sift/workflows/Rust+Python/badge.svg)](https://github.com/knapply/sift/actions)
 [![Lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)]()
 [![Travis-CI Build Status](https://travis-ci.org/knapply/sift.svg?branch=master)](https://travis-ci.org/knapply/sift)
 [![GitHub last commit](https://img.shields.io/github/last-commit/knapply/sift.svg)](https://github.com/knapply/sift/commits/master)
