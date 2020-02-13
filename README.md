@@ -2,8 +2,7 @@
 # `sift`
 
 <!-- badges: start -->
-
-[![Crates status](http://meritbadge.herokuapp.com/sift)](https://crates.io/crates/sift)
+[![Crates status](https://crates.io/crates/sift)](https://img.shields.io/crates/v/sift.svg)
 [![Lifecycle](https://img.shields.io/badge/lifecycle-maturing-orange.svg)](https://www.tidyverse.org/sift/#experimental)
 [![Travis-CI Build
 Status](https://travis-ci.org/knapply/sift.svg?branch=master)](https://travis-ci.org/knapply/sift)
