@@ -1,62 +1,28 @@
 name: Rust
 
-on: [push]
+on:
+  push:
+    branches:
+      - "*"
+  pull_request:
 
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
+    runs-on:  ${{ matrix.os }}
     strategy:
+      fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-latest, macOS-latest]
-
+        os: [ubuntu-latest, macOS-latest, windows-latest]
     steps:
-      - uses: actions/checkout@v1
-
-      - name: Install Rust Stable
-        uses: actions-rs/toolchain@v1
+      - uses: actions/checkout@v2
+      - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
-          components: rustfmt, clippy
           override: true
-
-      - name: Cache Cargo Registry
-        uses: actions/cache@v1
-        with:
-          path: ~/.cargo/registry
-          key: ${{ runner.os }}-cargo-registry-${{ hashFiles('**/Cargo.toml') }}
-
-      - name: Cache Cargo Build Target
-        uses: actions/cache@v1
-        with:
-          path: tokenizers/target
-          key: ${{ runner.os }}-cargo-build-${{ hashFiles('**/Cargo.toml') }}
-
-      - name: Build
-        uses: actions-rs/cargo@v1
-        with:
-          command: build
-          args: --all-targets --verbose --manifest-path ./tokenizers/Cargo.toml
-
-      - name: Lint with RustFmt
-        uses: actions-rs/cargo@v1
-        with:
-          command: fmt
-          args:  --manifest-path ./tokenizers/Cargo.toml -- --check
-
-      - name: Lint Benchmarks with RustFmt
-        uses: actions-rs/cargo@v1
-        with:
-          command: fmt
-          args:  --manifest-path ./tokenizers/Cargo.toml -- ./tokenizers/benches/bpe_benchmark.rs --check
-
-      - name: Lint with Clippy
-        uses: actions-rs/cargo@v1
-        with:
-          command: clippy
-          args:  --manifest-path ./tokenizers/Cargo.toml --all-targets --all-features -- -D warnings
-
-      - name: Run Tests
-        uses: actions-rs/cargo@v1
-        with:
-          command: test
-          args: --verbose --manifest-path ./tokenizers/Cargo.toml
+        if: matrix.os == 'macOS-latest'
+      - name: build
+        run: cargo build --verbose
+      - name: test
+        run: cargo test --no-fail-fast --verbose --all -- --nocapture
+        env:
+          RUST_BACKTRACE: 1
