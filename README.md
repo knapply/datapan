@@ -25,7 +25,7 @@ bytes](https://img.shields.io/github/languages/code-size/knapply/sift.svg)](http
 
 ```
 [dependencies]
-pcre2 = "0.1"
+sift = { git = "https://github.com/knapply/sift"}
 ```
 
 # Usage
