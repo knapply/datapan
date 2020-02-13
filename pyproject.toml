@@ -17,4 +17,12 @@ python = "^3.6"
 
 [tool.poetry.dev-dependencies]
 pytest = "^3.5"
+pylint = "^1.9"
+flake8 = "^3.5"
+wheel = "*"
+pytest-runner = "*"
+pytest-benchmark = "*"
+yajl = "*"
+hypothesis = "*"
+autopep8 = "*"
 maturin = "==0.7.7"
