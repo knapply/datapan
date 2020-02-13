@@ -2,7 +2,7 @@
 # `sift`
 
 <!-- badges: start -->
-[![crates.io](https://crates.io/crates/sift)](https://img.shields.io/crates/v/sift.svg)
+[![crates.io](https://img.shields.io/crates/v/sift.svg)](https://crates.io/crates/sift)
 [![Lifecycle](https://img.shields.io/badge/lifecycle-maturing-orange.svg)](https://www.tidyverse.org/sift/#experimental)
 [![Travis-CI Build Status](https://travis-ci.org/knapply/sift.svg?branch=master)](https://travis-ci.org/knapply/sift)
 [![GitHub last commit](https://img.shields.io/github/last-commit/knapply/sift.svg)](https://github.com/knapply/sift/commits/master)
