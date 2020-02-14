@@ -38,7 +38,9 @@ addons:
 
 before_install:
   - source ./ci/travis/setup.sh
-  - curl -L https://github.com/mozilla/grcov/releases/latest/download/grcov-linux-x86_64.tar.bz2 | tar jxf -
+  - pip install poetry
+#   - poetry run maturin build
+#   - curl -L https://github.com/mozilla/grcov/releases/latest/download/grcov-linux-x86_64.tar.bz2 | tar jxf -
 
 install:
     - poetry run maturin build
