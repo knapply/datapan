@@ -33,7 +33,6 @@ _`datapan`_ sifts through enormous files in parallelized Rust to only grab the d
 # source datapan_env/bin/activate
 # python -m pip install --upgrade pip
 
-## install datapan
 pip install datapan
 ```
 
