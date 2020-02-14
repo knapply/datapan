@@ -36,15 +36,16 @@ addons:
       - binutils-dev
       - libiberty-dev
 
-before_install:
-  - source ./ci/travis/setup.sh
-  - pip install poetry
+# before_install:
+#   - source ./ci/travis/setup.sh
+#   - pip install poetry
 #   - poetry run maturin build
 #   - curl -L https://github.com/mozilla/grcov/releases/latest/download/grcov-linux-x86_64.tar.bz2 | tar jxf -
 
 install:
-    - poetry install
     - pip install codecov
+    - pip install poetry
+    - poetry install
 #   - pip install setuptools-rust pytest pytest-benchmark
 
 # script:

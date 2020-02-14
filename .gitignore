@@ -23,3 +23,4 @@ pip-wheel-metadata
 valgrind-python.supp
 sift_env
 .vscode
+.coverage
