@@ -2,7 +2,7 @@
 # _`datapan`_ <a href='https://github.com/knapply/datapan'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Gold_panning_at_Bonanza_Creek.JPG/318px-Gold_panning_at_Bonanza_Creek.JPG' align="right" /></a>
 
 <!-- badges: start -->
-=![stability-experimental](https://img.shields.io/badge/stability-experimental-yellow.svg)
+![stability-experimental](https://img.shields.io/badge/stability-experimental-yellow.svg)
 [![Build](https://github.com/knapply/datapan/workflows/Rust+Python/badge.svg)](https://github.com/knapply/datapan/actions)
 [![Depends](https://img.shields.io/badge/Depends-Python%3E=3.6-darkgreen.svg)](https://www.python.org/)
 [![PyPI](https://badge.fury.io/py/datapan.svg)](https://badge.fury.io/py/datapan)
