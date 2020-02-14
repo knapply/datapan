@@ -3,7 +3,7 @@ name: Rust+Python
 on: [push, pull_request]
 
 jobs:
-  check:
+  lint:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -38,7 +38,7 @@ jobs:
 
   build:
     runs-on: ${{ matrix.os }}
-    needs: lint
+    needs: check
     strategy:
       fail-fast: false
       matrix:
