@@ -49,15 +49,18 @@ script:
   - if ! [[ $FEATURES == *"pypy"* ]]; then export RUSTFLAGS="-Zprofile -Ccodegen-units=1 -Cinline-threshold=0 -Clink-dead-code -Coverflow-checks=off -Zno-landing-pads"; fi
 #   - ./ci/travis/test.sh
 
-deploy:
-  - provider: script
-    skip_cleanup: true
-    script: ./ci/travis/cover.sh
-    on:
-      branch: master
-      repo: knapply/datapan
-      python: 3.6
-      condition: $TRAVIS_EVENT_TYPE != "cron"
+after_success:
+    - ./ci/travis/cover.sh
+
+# deploy:
+#   - provider: script
+#     skip_cleanup: true
+#     script: ./ci/travis/cover.sh
+#     on:
+#       branch: master
+#       repo: knapply/datapan
+#       python: 3.6
+#       condition: $TRAVIS_EVENT_TYPE != "cron"
 #   - provider: script
 #     skip_cleanup: true
 #     script: ./ci/travis/guide.sh
@@ -74,5 +77,5 @@ deploy:
 #       repo: knapply/datapan
 #       python: 3.6
 
-notifications:
-  email: false
+# notifications:
+#   email: false
