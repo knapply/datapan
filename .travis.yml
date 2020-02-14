@@ -43,10 +43,9 @@ addons:
 #   - curl -L https://github.com/mozilla/grcov/releases/latest/download/grcov-linux-x86_64.tar.bz2 | tar jxf -
 
 install:
-    - pip install codecov
-    - pip install poetry
+    - pip install -U poetry tox-travis codecov
     - poetry install
-    - poetry build
+    - poetry run maturin develop
 #   - pip install setuptools-rust pytest pytest-benchmark
 
 # script:
@@ -54,6 +53,9 @@ install:
 #   - if ! [[ $FEATURES == *"pypy"* ]]; then export CARGO_INCREMENTAL=0; fi
 #   - if ! [[ $FEATURES == *"pypy"* ]]; then export RUSTFLAGS="-Zprofile -Ccodegen-units=1 -Cinline-threshold=0 -Clink-dead-code -Coverflow-checks=off -Zno-landing-pads"; fi
 #   - source ./ci/travis/test.sh
+
+script:
+    - tox
 
 
 # Install the codecov pip dependency

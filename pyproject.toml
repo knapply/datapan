@@ -29,3 +29,16 @@ maturin = "==0.7.7"
 setuptools = "*"
 autopep8 = "*"
 setuptools-rust = "^0.10.2"
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+isolated_build = true
+envlist = py36, py37, py38
+[testenv]
+whitelist_externals = poetry
+passenv = CI TRAVIS TRAVIS_*
+commands =
+    poetry install -v
+    poetry run pytest --cov=./ tests/
+"""
