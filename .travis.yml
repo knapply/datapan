@@ -47,7 +47,7 @@ script:
   # Options for grcov
   - if ! [[ $FEATURES == *"pypy"* ]]; then export CARGO_INCREMENTAL=0; fi
   - if ! [[ $FEATURES == *"pypy"* ]]; then export RUSTFLAGS="-Zprofile -Ccodegen-units=1 -Cinline-threshold=0 -Clink-dead-code -Coverflow-checks=off -Zno-landing-pads"; fi
-  - ./ci/travis/test.sh
+#   - ./ci/travis/test.sh
 
 deploy:
   - provider: script
@@ -68,7 +68,7 @@ deploy:
       condition: $TRAVIS_EVENT_TYPE != "cron"
   - provider: script
     skip_cleanup: true
-    script: ./ci/travis/guide.sh
+    # script: ./ci/travis/guide.sh
     on:
       tags: true
       repo: knapply/datapan
