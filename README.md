@@ -11,14 +11,6 @@
 
 # Installation
 
-* get Rust (nightly)
-
-```sh
-curl https://sh.rustup.rs -sSf | sh
-rustup default nightly
-rustc --version # rustc 1.43.0-nightly (58b834344 2020-02-05)
-```
-
 
 * install _`datapan`_
 
@@ -44,4 +36,26 @@ some_dir = ""
 test = datapan.hello_rust(some_dir)
 
 print(test)
+```
+
+
+# Developer Version
+
+* Rust (nightly)
+
+```sh
+curl https://sh.rustup.rs -sSf | sh
+# rustup default nightly
+rustup update nightly
+```
+
+* Poetry
+
+```sh
+pip install poetry
+```
+
+```sh
+make install
+make test
 ```
