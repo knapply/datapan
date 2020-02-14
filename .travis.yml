@@ -45,7 +45,7 @@ addons:
 install:
     - pip install -U poetry tox-travis codecov
     - poetry install
-    - poetry run maturin develop
+    - poetry run maturin build
 #   - pip install setuptools-rust pytest pytest-benchmark
 
 # script:
