@@ -32,13 +32,8 @@ addons:
       - libiberty-dev
 
 install:
-    - cargo build
     - pip install -U poetry tox-travis codecov
     - poetry install
-    - poetry run maturin build
-
-script:
-    - tox
 
 after_success:
     - codecov
