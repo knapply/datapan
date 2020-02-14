@@ -63,12 +63,12 @@ script:
 #     - pip install codecov
   
 # Run the unit test
-script:
-- coverage run tests/tests.py
+# script:
+#     - coverage run tests/tests.py
   
 # Push the results back to codecov
 after_success:
-- codecov
+    - codecov
 
 # deploy:
 #   - provider: script
