@@ -44,6 +44,7 @@ before_install:
 
 install:
     - poetry run maturin build
+    - pip install codecov
 #   - pip install setuptools-rust pytest pytest-benchmark
 
 # script:
@@ -54,8 +55,8 @@ install:
 
 
 # Install the codecov pip dependency
-install:
-    - pip install codecov
+# install:
+#     - pip install codecov
   
 # Run the unit test
 script:
