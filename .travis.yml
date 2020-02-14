@@ -58,9 +58,9 @@ install:
 script:
 - coverage run tests/tests.py
   
-  # Push the results back to codecov
-  after_success:
-    - codecov
+# Push the results back to codecov
+after_success:
+- codecov
 
 # deploy:
 #   - provider: script
