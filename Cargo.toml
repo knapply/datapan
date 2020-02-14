@@ -1,21 +1,21 @@
 [package]
-name = "sift"
+name = "datapan"
 version = "0.1.0"
 authors = ["Brendan Knapp <brendan.knapp@nps.edu>"]
 edition = "2018"
 license = "GPL-3.0"
-documentation = "https://github.com/knapply/sift"
-homepage = "https://github.com/knapply/sift"
-repository = "https://github.com/knapply/sift"
+documentation = "https://github.com/knapply/datapan"
+homepage = "https://github.com/knapply/datapan"
+repository = "https://github.com/knapply/datapan"
 readme = "README.md"
 keywords = ["json", "filter"]
 description = """
-sift filters (big) files.
+datapan filters (big) files.
 """
 
 [badges]
-travis-ci = { repository = "knapply/sift" }
-appveyor = { repository = "knapply/sift" }
+travis-ci = { repository = "knapply/datapan" }
+appveyor = { repository = "knapply/datapan" }
 
 [dependencies]
 flate2 = "1.0.13"
@@ -24,7 +24,7 @@ simd-json = "0.2.2"
 rayon = "1.1"
 
 [lib]
-name = "sift"
+name = "datapan"
 crate-type = ["cdylib"]
 
 [dependencies.pyo3]

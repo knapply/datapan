@@ -75,21 +75,18 @@
 # install_requires: List[str] = []
 # tests_require = install_requires + ["pytest", "pytest-benchmark"]
 
-# setup(name='sift',
+# setup(name='datapan',
 #       author="Brendan Knapp",
 #       author_email="brendan.knapp@nps.edu",
-#       url='http://github.com/knapply/sift/',
-#       description="sift filters big files.",
+#       url='http://github.com/knapply/datapan/',
+#       description="datapan filters big files.",
 #       long_description=open("README.md").read(),
 #       version="0.1.0",
-#       rust_extensions=[RustExtension('sift', 'Cargo.toml',  binding=Binding.PyO3)],
+#       rust_extensions=[RustExtension('datapan', 'Cargo.toml',  binding=Binding.PyO3)],
 #       test_suite="tests",
-#       license="MIT",
+#       license="GPL-3.0",
 #       classifiers=[
 #         "Development Status :: 3 - Alpha",
-#         "Programming Language :: Python :: 3",
-#         "Intended Audience :: Developers",
-#         "License :: OSI Approved :: MIT License",
 #         "Topic :: Software Development :: Libraries",
 #         "Topic :: Utilities"],
 #       install_requires=install_requires,

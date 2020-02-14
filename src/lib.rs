@@ -43,7 +43,7 @@ fn hello_rust(target_dir: &str) -> Vec<String> {
 }
 
 #[pymodule]
-fn sift(_py: Python, m: &PyModule) -> PyResult<()> {
+fn datapan(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_wrapped(wrap_pyfunction!(hello_rust))?;
 
     Ok(())

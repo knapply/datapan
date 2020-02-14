@@ -1,15 +1,19 @@
 [tool.poetry]
-name = "sift"
+name = "datapan"
 version = "0.1.0"
-authors = ["Brendan Knapp <brendan.knapp@nps.edu>"]
-documentation = "https://github.com/knapply/sift"
-homepage = "https://github.com/knapply/sift"
-repository = "https://github.com/knapply/sift"
+authors = ["Brendan Knapp <brendan.g.knapp@gmail.com>"]
+documentation = "https://github.com/knapply/datapan"
+homepage = "https://github.com/knapply/datapan"
+repository = "https://github.com/knapply/datapan"
+license = "GPL-3.0"
 readme = "README.md"
 keywords = ["json", "filter"]
 description = """
-sift filters (big) files.
+datapan filters (big) files.
 """
+include = [
+    "LICENSE",
+]
 
 [tool.poetry.dependencies]
 python = "^3.6"

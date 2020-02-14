@@ -1,6 +1,6 @@
 import os
 import pytest
-import sift
+import datapan
 
 
 def get_test_files(target_dir="test-data", target_exts=[".json", ".ndjson"]):
@@ -13,8 +13,8 @@ def get_test_files(target_dir="test-data", target_exts=[".json", ".ndjson"]):
     return out
 
 
-def test_sift(target_dir="test-data"):
-    test = sift.hello_rust(target_dir)
+def test_datapan(target_dir="test-data"):
+    test = datapan.hello_rust(target_dir)
     
     test_files = get_test_files(target_dir)
     target = []
