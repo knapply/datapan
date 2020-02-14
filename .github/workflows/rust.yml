@@ -87,7 +87,6 @@ jobs:
       - name: Publish on crates.io
         run: |
           cargo login ${{ secrets.CARGO }}
-          cargo yank --vers 0.1.1
           cargo publish
 
   python-publish:
@@ -140,13 +139,13 @@ jobs:
         run: pip install target/wheels/datapan*.whl
 
 
-      - name: Release
-        uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
-        with:
-          files: target/wheels/datapan*.whl
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Release
+      #   uses: softprops/action-gh-release@v1
+      #   if: startsWith(github.ref, 'refs/tags/')
+      #   with:
+      #     files: target/wheels/datapan*.whl
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: PyPi publish
         if: github.event.action == 'created'
