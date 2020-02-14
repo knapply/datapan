@@ -33,4 +33,14 @@ source sift_env/bin/activate
 pip3 install git+git://github.com/knapply/sift.git
 ```
 
-<!-- # Usage -->
+# Usage
+
+```python
+import sift
+
+some_dir = ""
+
+test = sift.hello_rust(some_dir)
+
+print(test)
+```
