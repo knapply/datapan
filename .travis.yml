@@ -50,7 +50,7 @@ script:
 #   - ./ci/travis/test.sh
 
 after_success:
-    - ./ci/travis/cover.sh
+    - source ./ci/travis/cover.sh
 
 # deploy:
 #   - provider: script
