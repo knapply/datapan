@@ -46,6 +46,7 @@ install:
     - pip install codecov
     - pip install poetry
     - poetry install
+    - poetry build
 #   - pip install setuptools-rust pytest pytest-benchmark
 
 # script:
