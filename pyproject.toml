@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "datapan"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Brendan Knapp <brendan.g.knapp@gmail.com>"]
 documentation = "https://github.com/knapply/datapan"
 homepage = "https://github.com/knapply/datapan"
