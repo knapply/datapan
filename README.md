@@ -6,7 +6,7 @@
 [![Build](https://github.com/knapply/datapan/workflows/Rust+Python/badge.svg)](https://github.com/knapply/datapan/actions)
 [![Lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)]()
 [![PyPI](https://badge.fury.io/py/datapan.svg)](https://badge.fury.io/py/datapan)
-[![Crates.io](https://img.shields.io/crates/v/datapan.svg?maxAge=3600)](https://crates.io/crates/datapan)
+[![Crates.io](https://img.shields.io/crates/v/datapan.svg)](https://crates.io/crates/datapan)
 
 <!-- [![crates.io](https://img.shields.io/badge/crates.io-sift-green.svg)](https://crates.io/crates/datapan) -->
 <!-- [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) -->
