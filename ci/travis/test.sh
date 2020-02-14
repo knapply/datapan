@@ -15,12 +15,8 @@ if [ "$TRAVIS_JOB_NAME" = "Minimum nightly" ]; then
     make lint
 fi
 
-for example_dir in examples/*; do
-    cd $example_dir
-    if [[ $FEATURES == *"pypy"* ]]; then
-        tox -c "tox.ini" -e pypy3
-    else
-        tox -c "tox.ini" -e py
-    fi
-    cd -
-done
+if [[ $FEATURES == *"pypy"* ]]; then
+    tox -c "tox.ini" -e pypy3
+else
+    tox -c "tox.ini" -e py
+
