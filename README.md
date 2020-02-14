@@ -23,11 +23,18 @@ rustc --version # rustc 1.43.0-nightly (58b834344 2020-02-05)
 * install _`sift`_
 
 ```sh
+## create/activate venv
 # sudo apt-get install python3-venv
-python3 -m venv sift_env
-source sift_env/bin/activate
+# python3 -m venv sift_env
+# source sift_env/bin/activate
+# python -m pip install --upgrade pip
 
-pip3 install git+git://github.com/knapply/sift.git
+## install poetry dependency manager
+# pip install poetry
+# poetry install
+
+## install sift
+pip install git+git://github.com/knapply/sift.git
 ```
 
 # Usage
