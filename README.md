@@ -1,5 +1,5 @@
 
-# _`datapan`_
+# _`datapan`_ <a href='https://github.com/knapply/datapan'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Gold_panning_at_Bonanza_Creek.JPG/318px-Gold_panning_at_Bonanza_Creek.JPG' align="right" /></a>
 
 <!-- badges: start -->
 <!-- [![crates.io](https://img.shields.io/crates/v/datapan.svg)](https://crates.io/crates/datapan) -->
