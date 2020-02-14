@@ -8,11 +8,13 @@
 <!-- [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) -->
 <!-- badges: end -->
 
+<br>
+
+_`datapan`_ sifts through enormous files in parallelized Rust to only grab the data you want as quickly and memory-efficiently as possilbe.
+
+<br>
 
 # Installation
-
-
-* install _`datapan`_
 
 ```sh
 ## create/activate venv
@@ -20,7 +22,6 @@
 # python3 -m venv datapan_env
 # source datapan_env/bin/activate
 # python -m pip install --upgrade pip
-
 
 ## install datapan
 pip install datapan
