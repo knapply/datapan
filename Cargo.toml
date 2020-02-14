@@ -3,6 +3,7 @@ name = "sift"
 version = "0.1.0"
 authors = ["Brendan Knapp <brendan.knapp@nps.edu>"]
 edition = "2018"
+license = "GPL-3.0"
 documentation = "https://github.com/knapply/sift"
 homepage = "https://github.com/knapply/sift"
 repository = "https://github.com/knapply/sift"
