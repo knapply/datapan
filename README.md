@@ -19,17 +19,14 @@ rustup default nightly
 rustc --version # rustc 1.43.0-nightly (58b834344 2020-02-05)
 ```
 
-* create/activate venv
+
+* install _`sift`_
 
 ```sh
 # sudo apt-get install python3-venv
 python3 -m venv sift_env
 source sift_env/bin/activate
-```
 
-* install _`sift`_
-
-```sh
 pip3 install git+git://github.com/knapply/sift.git
 ```
 
