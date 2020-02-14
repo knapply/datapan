@@ -73,7 +73,7 @@ jobs:
         run: poetry run pytest tests
 
   rust-publish:
-    if: startsWith(github.ref, 'refs/tags/')
+    # if: startsWith(github.ref, 'refs/tags/')
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -130,11 +130,11 @@ jobs:
 
       # Note: Windows doesn't support glob
       # https://stackoverflow.com/a/52481267/270334
-      - name: Install wheels
+      - name: Install Windows wheels
         if:  matrix.os == 'windows-latest'
         run: pip install --find-links=target\wheels datapan
 
-      - name: Install wheels
+      - name: Install non-Windows wheels
         if:  matrix.os != 'windows-latest'
         run: pip install target/wheels/datapan*.whl
 
