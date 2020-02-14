@@ -49,8 +49,18 @@ script:
   - if ! [[ $FEATURES == *"pypy"* ]]; then export RUSTFLAGS="-Zprofile -Ccodegen-units=1 -Cinline-threshold=0 -Clink-dead-code -Coverflow-checks=off -Zno-landing-pads"; fi
   - source ./ci/travis/test.sh
 
-after_success:
-    - source ./ci/travis/cover.sh
+
+# Install the codecov pip dependency
+install:
+    - pip install codecov
+  
+  # Run the unit test
+  script:
+    - coverage run tests/tests.py
+  
+  # Push the results back to codecov
+  after_success:
+    - codecov
 
 # deploy:
 #   - provider: script
