@@ -3,14 +3,14 @@
 
 <!-- badges: start -->
 <!-- [![crates.io](https://img.shields.io/crates/v/datapan.svg)](https://crates.io/crates/datapan) -->
-[![Build](https://github.com/knapply/datapan/workflows/Rust+Python/badge.svg)](https://github.com/knapply/datapan/actions)
-[![Depends](https://img.shields.io/badge/Depends-Python%3E=3.6-darkgreen.svg)](https://www.python.org/)
-[![PyPI](https://badge.fury.io/py/datapan.svg)](https://badge.fury.io/py/datapan)
-[![Crates.io](https://img.shields.io/crates/v/datapan.svg)](https://crates.io/crates/datapan)
 ![stability-experimental](https://img.shields.io/badge/stability-experimental-yellow.svg)
+[![Build](https://github.com/knapply/datapan/workflows/Rust+Python/badge.svg)](https://github.com/knapply/datapan/actions)
 [![Travis-CI Build Status](https://travis-ci.org/knapply/datapan.svg?branch=master)](https://travis-ci.org/knapply/datapan)
 [![Codecov test coverage](https://codecov.io/gh/knapply/datapan/branch/master/graph/badge.svg)](https://codecov.io/gh/knapply/datapan?branch=master)
+[![Depends](https://img.shields.io/badge/Depends-Python%3E=3.6-darkgreen.svg)](https://www.python.org/)
+[![PyPI](https://badge.fury.io/py/datapan.svg)](https://badge.fury.io/py/datapan)
 [![PyPI download month](https://img.shields.io/pypi/dm/datapan.svg)](https://pypi.python.org/pypi/datapan/)
+[![Crates.io](https://img.shields.io/crates/v/datapan.svg)](https://crates.io/crates/datapan)
 <!-- [![crates.io](https://img.shields.io/badge/crates.io-sift-green.svg)](https://crates.io/crates/datapan) -->
 <!-- [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) -->
 <!-- badges: end -->
