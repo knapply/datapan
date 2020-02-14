@@ -28,7 +28,7 @@ _`datapan`_ sifts through enormous files in parallelized Rust to only grab the d
 ```sh
 ## create/activate venv
 # sudo apt-get install python3-venv
-# python3 -m venv datapan_env
+# python -m venv datapan_env
 # source datapan_env/bin/activate
 # python -m pip install --upgrade pip
 
