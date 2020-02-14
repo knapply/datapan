@@ -14,7 +14,7 @@
 
 <br>
 
-__This is still a test bed. It is not useful__
+__This is still a worflow test bed. It is not yet useful.__
 
 _`datapan`_ sifts through enormous files in parallelized Rust to only grab the data you want as quickly and memory-efficiently as possilbe.
 
