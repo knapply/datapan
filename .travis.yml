@@ -1,0 +1,78 @@
+language: python
+
+dist: xenial
+
+cache:
+  pip: true
+  cargo: true
+
+matrix:
+  include:
+    - name: Python 3.6
+      python: "3.6"
+    - name: Python 3.7
+      python: "3.7"
+    - name: Python 3.8-dev
+      python: "3.8-dev"
+    - name: Minimum nightly
+      python: "3.7"
+      # Keep this synced up with build.rs and ensure that the nightly version does have clippy available
+      # https://static.rust-lang.org/dist/YYYY-MM-DD/clippy-nightly-x86_64-unknown-linux-gnu.tar.gz exists
+      env: TRAVIS_RUST_VERSION=nightly-2020-01-21
+
+env:
+  global:
+    - TRAVIS_RUST_VERSION=nightly
+    - RUST_BACKTRACE=1
+
+addons:
+  apt:
+    packages:
+      - libcurl4-openssl-dev
+      - libelf-dev
+      - libdw-dev
+      - cmake
+      - gcc
+      - binutils-dev
+      - libiberty-dev
+
+before_install:
+  - source ./ci/travis/setup.sh
+  - curl -L https://github.com/mozilla/grcov/releases/latest/download/grcov-linux-x86_64.tar.bz2 | tar jxf -
+
+install:
+  - pip install setuptools-rust pytest pytest-benchmark tox
+
+script:
+  # Options for grcov
+  - if ! [[ $FEATURES == *"pypy"* ]]; then export CARGO_INCREMENTAL=0; fi
+  - if ! [[ $FEATURES == *"pypy"* ]]; then export RUSTFLAGS="-Zprofile -Ccodegen-units=1 -Cinline-threshold=0 -Clink-dead-code -Coverflow-checks=off -Zno-landing-pads"; fi
+  - ./ci/travis/test.sh
+
+deploy:
+  - provider: script
+    skip_cleanup: true
+    script: ./ci/travis/cover.sh
+    on:
+      branch: master
+      repo: knapply/datapan
+      python: 3.6
+      condition: $TRAVIS_EVENT_TYPE != "cron"
+  - provider: script
+    skip_cleanup: true
+    script: ./ci/travis/guide.sh
+    on:
+      branch: master
+      repo: knapply/datapan
+      python: 3.6
+      condition: $TRAVIS_EVENT_TYPE != "cron"
+  - provider: script
+    skip_cleanup: true
+    script: ./ci/travis/guide.sh
+    on:
+      tags: true
+      repo: knapply/datapan
+      python: 3.6
+
+notifications:
+  email: false

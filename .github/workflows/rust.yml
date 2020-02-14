@@ -87,6 +87,7 @@ jobs:
       - name: Publish on crates.io
         run: |
           cargo login ${{ secrets.CARGO }}
+          cargo yank --vers 0.1.1
           cargo publish
 
   python-publish:
