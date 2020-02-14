@@ -35,6 +35,7 @@ rustc --version # rustc 1.43.0-nightly (58b834344 2020-02-05)
 
 ## install sift
 pip install git+git://github.com/knapply/sift.git
+pip install sift
 ```
 
 # Usage
