@@ -36,9 +36,6 @@ jobs:
   
         - name: pytest
           run: poetry run pytest tests
-  
-        - name: Benchmark
-          run: poetry run pytest benchmarks --compare
           
         # - name: Build sift
         #   run: cargo build --verbose
