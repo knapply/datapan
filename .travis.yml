@@ -43,20 +43,20 @@ before_install:
 install:
   - pip install setuptools-rust pytest pytest-benchmark tox
 
-script:
-  # Options for grcov
-  - if ! [[ $FEATURES == *"pypy"* ]]; then export CARGO_INCREMENTAL=0; fi
-  - if ! [[ $FEATURES == *"pypy"* ]]; then export RUSTFLAGS="-Zprofile -Ccodegen-units=1 -Cinline-threshold=0 -Clink-dead-code -Coverflow-checks=off -Zno-landing-pads"; fi
-  - source ./ci/travis/test.sh
+# script:
+#   # Options for grcov
+#   - if ! [[ $FEATURES == *"pypy"* ]]; then export CARGO_INCREMENTAL=0; fi
+#   - if ! [[ $FEATURES == *"pypy"* ]]; then export RUSTFLAGS="-Zprofile -Ccodegen-units=1 -Cinline-threshold=0 -Clink-dead-code -Coverflow-checks=off -Zno-landing-pads"; fi
+#   - source ./ci/travis/test.sh
 
 
 # Install the codecov pip dependency
 install:
     - pip install codecov
   
-  # Run the unit test
-  script:
-    - coverage run tests/tests.py
+# Run the unit test
+script:
+- coverage run tests/tests.py
   
   # Push the results back to codecov
   after_success:
