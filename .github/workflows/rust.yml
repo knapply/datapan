@@ -1,6 +1,6 @@
 name: Rust+Python
 
-on: [push, pull_request]
+on: [push, pull_request, release]
 
 jobs:
   check:
