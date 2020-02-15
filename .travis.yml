@@ -2,9 +2,9 @@ language: python
 
 dist: xenial
 
-cache:
-  pip: true
-  cargo: true
+# cache:
+#   pip: true
+#   cargo: true
 
 matrix:
   include:
