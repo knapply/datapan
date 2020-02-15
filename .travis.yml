@@ -1,6 +1,4 @@
-language: 
-  - python
-  - rust
+language: rust
 
 dist: xenial
 
@@ -33,8 +31,8 @@ addons:
       - binutils-dev
       - libiberty-dev
 
-before_install:
-  - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain nightly --component clippy rustfmt
+# before_install:
+#   - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain nightly --component clippy rustfmt
 
 install:
    - pip install -U poetry pytest-cov
