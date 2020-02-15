@@ -37,7 +37,7 @@ before_install:
 install:
    - pip install -U poetry pytest-cov
    - poetry install
-   - cargo build
+  #  - cargo build
    - poetry run maturin build --release
    - poetry run pytest tests
   #  - pytest --cov=myproj tests/
