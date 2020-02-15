@@ -38,7 +38,7 @@ before_install:
 install:
    - pip install -U poetry pytest-cov
    - poetry install
-   - poetry run maturin develop --release
+  #  - poetry run maturin develop --release
    - pytest --cov=myproj tests/
   
 after_success:
