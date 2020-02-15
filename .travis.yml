@@ -31,9 +31,6 @@ addons:
       - binutils-dev
       - libiberty-dev
 
-script:
-  - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
 install:
    - pip install pytest-cov
    - poetry install
