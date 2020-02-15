@@ -1,4 +1,6 @@
-language: python
+language: 
+  - python
+  - rust
 
 dist: xenial
 
