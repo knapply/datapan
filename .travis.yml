@@ -32,7 +32,7 @@ addons:
       - libiberty-dev
 
 install:
-   - pip install pytest-cov
+   - pip install -U poetry pytest-cov
    - poetry install
    - pytest --cov=myproj tests/
   
