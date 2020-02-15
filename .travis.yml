@@ -31,14 +31,13 @@ addons:
       - binutils-dev
       - libiberty-dev
 
-
 before_install:
   - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain nightly --component clippy rustfmt
 
 install:
    - pip install -U poetry pytest-cov
    - poetry install
-   - poetry run pytest
+   - poetry run pytest tests
   #  - pytest --cov=myproj tests/
   
 after_success:
