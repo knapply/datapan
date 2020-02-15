@@ -35,10 +35,9 @@ script:
   - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 install:
-   - rustup install nightly
-   - pip install -U poetry tox-travis codecov
+   - pip install pytest-cov
    - poetry install
-   - make test
+   - pytest --cov=myproj tests/
   
 after_success:
     - codecov
